@@ -41,12 +41,12 @@ def timelapse():
     folium_map = folium.Map(location=start_coords, zoom_start=6, tiles='Stamen Terrain')
     # mapData.write_csv("Data/mapdata.csv")
     #add the Heat Map from the data
-    HeatMap(data=mapData, radius=20).add_to(folium_map)
-    #HeatMapWithTime(data=mapData, index=mapTime, radius=20,scale_radius=True).add_to(folium_map)
+    #HeatMap(data=mapData, radius=20).add_to(folium_map)
+    HeatMapWithTime(data=mapData, index=mapTime, radius=20,scale_radius=True).add_to(folium_map)
  
     # display base map with HeatMap 
-        
-    return render_template("timelapse.html", map_id=folium_map._repr_html_())
+    return folium_map._repr_html_()    
+    #return render_template("timelapse.html", map_id=folium_map._repr_html_())
     
 
 @app.route("/yearlyvpop")
