@@ -1,0 +1,33 @@
+ /* Container for image and header */
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+    
+}
+
+  /* text in container */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 300%;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: darkblue;
+    font-family: Verdana;
+} 
+
+body {background-color:lightblue;}
+
+h1 {
+  position: absolute;
+  left: 1%;
+  font-size: 350%;
+  font-family: fantasy;
+  color: darkblue;
+}
+
+.list-group {
+  background-color: darkcyan;
+}

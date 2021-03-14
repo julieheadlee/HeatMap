@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Air Quality</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/reset_style.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/index_style.css') }}">
+		<link rel="apple-touch-icon" sizes="180x180" href="{{url_for('static', filename='favicon/apple-touch-icon.png') }}">
+		<link rel="icon" type="image/png" sizes="32x32" href="{{url_for('static', filename='favicon/favicon-32x32.png') }}">
+		<link rel="icon" type="image/png" sizes="16x16" href="{{url_for('static', filename='favicon/favicon-16x16.png') }}">
+		<link rel="manifest" href="{{url_for('static', filename='favicon/site.webmanifest') }}">
+	</head>
+	<body>
+		<div class = "container">
+			<div class = "row">
+				<div class = "col-md-12">
+					<img width = 100% height = 250px src="{{ url_for('static', filename='images/nature-4260654_1920.jpg') }}" alt="Header Image Sky">
+					<div class="centered">Air Quality of California</div>
+				</div>
+			</div>
+		</div>
+        
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+			<div class="container-fluid">
+			<a class="navbar-brand" href="/">Home Page</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0 text-end">
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+					Air Quality
+					</a>
+					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<li><a class="dropdown-item" href="/current">Current Conditions</a></li>
+					<li><a class="dropdown-item" href="/historical_form">Historical: Form</a></li>
+					<li><a class="dropdown-item" href="/historical_map">Historical: Map</a></li>
+					<li><a class="dropdown-item" href="/timelapse">Time Lapse</a></li>
+					<li><a class="dropdown-item" href="/countyvpop">County Air Quality vs. Population</a></li>
+                    <li><a class="dropdown-item" href="/yearlyvpop">Yearly Air Quality vs. Population</a></li>
+					</ul>
+					<li class="nav-item">
+						<a class="nav-link" href="/sources">Sources</a>
+					<li class="nav-item">
+						<a class="nav-link" href="/members">Members</a>
+				</ul>
+			</div>
+			</div>
+		</nav>
+		<h1>Historical: Form</h1>
+			<div>
+
+            </div>
+
+<!--script for the drop down menu to work -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script src="https://d3js.org/d3.v5.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+    </body>
+</html>
